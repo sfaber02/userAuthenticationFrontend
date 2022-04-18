@@ -99,7 +99,9 @@ const Login = (props) => {
         }
     }
 
-    const handleNewUserSuccess = () => {}
+    const handleNewUserSuccess = () => {
+        setMessage('New User Created Successfully!')
+    }
 
     const handleLoginSuccess = (res, save, password) => {
         props.handleLogin(res.data.user, res.data.email, res.data.token, save, password)
