@@ -5,7 +5,8 @@ import { Routes, Route, useNavigate} from 'react-router-dom';
 
 
 
-const API = process.env.API_BACKEND;
+const API = process.env.REACT_APP_API_BACKEND;
+const DECRYPT_KEY = process.env.REACT_APP_CRYPTO_SECRET;
 
 const Login = (props) => {
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Login = (props) => {
 
     useEffect(() => {
         if (storedUser) {
-            const decrypted = AES.decrypt(storedUser.password, process.env.CRYPTO_SECRET).toString(enc.Utf8);
+            const decrypted = AES.decrypt(storedUser.password, DECRYPT_KEY).toString(enc.Utf8);
             autoLogin(storedUser.email, decrypted);
         }
     }, [storedUser])

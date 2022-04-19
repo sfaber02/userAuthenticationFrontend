@@ -13,7 +13,7 @@ import './styles/navbar.css'
 
 //Globals
 const LOCAL_STORAGE_KEY = 'mmgps.credentials';
-const ENCRYPT_KEY = process.env.CRYPTO_SECRET;
+const ENCRYPT_KEY = process.env.REACT_APP_CRYPTO_SECRET;
 
 
 let storedUser =JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
