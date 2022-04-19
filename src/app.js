@@ -12,7 +12,7 @@ import { NavBar } from './navbar.js';
 import './styles/navbar.css'
 
 //Globals
-const LOCAL_STORAGE_KEY = 'mmgps.credentials';
+const LOCAL_STORAGE_KEY = 'userauth.credentials';
 const ENCRYPT_KEY = process.env.REACT_APP_CRYPTO_SECRET;
 
 
